@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Scout - Altitude Checker</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="theme-color" content="#1f2937">
+    <link rel="icon" href="/icons/icon-192x192.png">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>Mountain Scout</h1>
+            <p class="subtitle">Altitude Safety Companion</p>
+        </header>
+
+        <main>
+            <div class="card checker-card">
+                <h2>Altitude Check</h2>
+                <form id="altitudeForm">
+                    <div class="input-group">
+                        <label for="altitude">Current Altitude (meters)</label>
+                        <input type="number" id="altitude" required min="0" max="9000">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Current Symptoms</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" id="headache">
+                                Headache
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" id="nausea">
+                                Nausea/Vomiting
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" id="dizziness">
+                                Dizziness
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" id="fatigue">
+                                Fatigue
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Check Risk Level</button>
+                </form>
+            </div>
+
+            <div id="result" class="card result-card hidden">
+                <!-- Results will be inserted here -->
+            </div>
+
+            <div class="card history-card">
+                <h2>Previous Checks</h2>
+                <div id="history" class="history-list">
+                    <!-- History items will be inserted here -->
+                </div>
+            </div>
+        </main>
+
+        <div id="installPrompt" class="install-prompt hidden">
+            <p>Install Mountain Scout for offline use</p>
+            <button id="installButton" class="btn-secondary">Install</button>
+        </div>
+    </div>
+
+    <script src="/db.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
