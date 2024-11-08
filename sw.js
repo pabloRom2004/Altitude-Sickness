@@ -1,16 +1,15 @@
 // sw.js
 const CACHE_NAME = 'altitude-sickness-v1';
-const BASE_PATH = '/Altitude-Sickness'; // Add this line
 
 const ASSETS_TO_CACHE = [
-    `${BASE_PATH}/`,
-    `${BASE_PATH}/index.html`,
-    `${BASE_PATH}/app.js`,
-    `${BASE_PATH}/db.js`,
-    `${BASE_PATH}/styles.css`,
-    `${BASE_PATH}/manifest.json`,
-    `${BASE_PATH}/icons/icon-192x192.png`,
-    `${BASE_PATH}/icons/icon-512x512.png`
+    ``,
+    `index.html`,
+    `app.js`,
+    `db.js`,
+    `styles.css`,
+    `manifest.json`,
+    `icons/icon-192x192.png`,
+    `icons/icon-512x512.png`
 ];
 
 self.addEventListener('install', (event) => {
