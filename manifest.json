@@ -1,23 +1,23 @@
 {
     "name": "Mountain Scout - Altitude Checker",
     "short_name": "Mountain Scout",
-    "description": "Offline-capable altitude sickness checker for mountaineers",
-    "start_url": "/",
+    "start_url": "/Altitude-Sickness/",
+    "scope": "/Altitude-Sickness/",
     "display": "standalone",
     "background_color": "#1f2937",
     "theme_color": "#1f2937",
     "icons": [
-      {
-        "src": "/icons/icon-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "/icons/icon-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "any maskable"
-      }
+        {
+            "src": "./icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
     ]
-  }
+}

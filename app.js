@@ -10,10 +10,15 @@ async function initApp() {
 
 // Service Worker Registration
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => console.log('ServiceWorker registered'))
-            .catch(err => console.log('ServiceWorker registration failed: ', err));
+    window.addEventListener('load', async () => {
+        try {
+            const registration = await navigator.serviceWorker.register('./sw.js', {
+                scope: '/Altitude-Sickness/'
+            });
+            console.log('ServiceWorker registration successful:', registration.scope);
+        } catch (err) {
+            console.error('ServiceWorker registration failed:', err);
+        }
     });
 }
 
